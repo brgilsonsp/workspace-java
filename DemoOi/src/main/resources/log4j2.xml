@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout>
+            	<pattern>%d %p %C{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+        </Console>
+        
+        <RollingFile name="InfoRolling"
+            fileName="logs/DemoOi/info.log"
+            filePattern="logs/DemoOi/bkpInfo/$${date:yyyy-MM}/info-%d{-dd-MMMM-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <pattern>%d %p %C{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy
+                    size="10 MB" />
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+        
+    </Appenders>
+ 
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="Console" level="info" />
+            <AppenderRef ref="InfoRolling" level="info" />
+        </Root>
+    </Loggers>
+ 
+</Configuration>

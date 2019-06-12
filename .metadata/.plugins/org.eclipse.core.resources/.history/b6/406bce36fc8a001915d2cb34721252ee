@@ -1,0 +1,33 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.List;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import br.com.icarros.gilson.formulaone.model.Race;
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+@Document(collection="race_table")
+public class RaceTableDocument {
+  private String season = null;
+  private String round = null;
+  private List<Race> races = null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class RaceTable {\n");
+    
+    sb.append("    season: ").append(StringHelpders.toIndentedString(season)).append("\n");
+    sb.append("    round: ").append(StringHelpders.toIndentedString(round)).append("\n");
+    sb.append("    races: ");
+    
+    races.forEach(item -> {
+    	sb.append(StringHelpders.toIndentedString(item.toString())).append("\n");
+    });
+    
+    sb.append("}");
+    return sb.toString();
+  }
+}
+

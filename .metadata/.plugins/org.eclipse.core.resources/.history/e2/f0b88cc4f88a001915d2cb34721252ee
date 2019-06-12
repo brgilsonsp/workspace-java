@@ -1,0 +1,19 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+public class TimeFastestLap2   {
+  private String time = null;
+
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class TimeFastestLap {\n");
+    
+    sb.append("    time: ").append(StringHelpders.toIndentedString(time)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+  
+}

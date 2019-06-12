@@ -1,0 +1,31 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.Objects;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+import io.swagger.annotations.ApiModelProperty;
+
+public class ConstructorDocument {
+	private String constructorId = null;
+	private String url = null;
+	private String name = null;
+	private String nationality = null;
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class ConstructorDocument {\n");
+
+		sb.append("    constructorId: ").append(StringHelpders.toIndentedString(constructorId)).append("\n");
+		sb.append("    url: ").append(StringHelpders.toIndentedString(url)).append("\n");
+		sb.append("    name: ").append(StringHelpders.toIndentedString(name)).append("\n");
+		sb.append("    nationality: ").append(StringHelpders.toIndentedString(nationality)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+
+}

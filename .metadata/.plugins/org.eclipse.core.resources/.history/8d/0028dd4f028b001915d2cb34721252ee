@@ -1,0 +1,98 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import br.com.icarros.gilson.formulaone.model.Circuit;
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+@Document(collection = "circuit")
+public class CircuitDocument {
+	@Id
+	private String id;
+	private String circuitId;
+	private String url;
+	private String circuitName;
+	private LocationCircuitDocument location;
+
+	public CircuitDocument() {
+	}
+
+	public CircuitDocument(String circuitId, String url, String circuitName, LocationCircuitDocument location) {
+		this.circuitId = circuitId;
+		this.url = url;
+		this.circuitName = circuitName;
+		this.location = location;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getCircuitId() {
+		return circuitId;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public String getCircuitName() {
+		return circuitName;
+	}
+
+	public LocationCircuitDocument getLocation() {
+		return location;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((circuitId == null) ? 0 : circuitId.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CircuitDocument other = (CircuitDocument) obj;
+		if (circuitId == null) {
+			if (other.circuitId != null)
+				return false;
+		} else if (!circuitId.equals(other.circuitId))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class CircuitDocument {\n");
+
+		sb.append("    circuitId: ").append(StringHelpders.toIndentedString(circuitId)).append("\n");
+		sb.append("    url: ").append(StringHelpders.toIndentedString(url)).append("\n");
+		sb.append("    circuitName: ").append(StringHelpders.toIndentedString(circuitName)).append("\n");
+		sb.append("    location: ").append(StringHelpders.toIndentedString(location.toString())).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+
+	public static CircuitDocument toCircuit(Circuit circuit) {
+		try {
+			String _circuitId = circuit.getCircuitId();
+			String _url = circuit.getUrl();
+			String _circuitName = circuit.getCircuitName();
+			LocationCircuitDocument _location = LocationCircuitDocument.toLocation(circuit.getLocation());
+			
+		return new CircuitDocument(_circuitId, _url, _circuitName, _location);
+		}catch(Exception e) {
+			return null;
+		}
+	}
+}

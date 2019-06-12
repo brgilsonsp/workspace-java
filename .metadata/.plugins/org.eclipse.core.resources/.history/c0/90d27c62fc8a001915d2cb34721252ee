@@ -1,0 +1,42 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModelProperty;
+
+public class Race2 {
+  private String season = null;
+  private String round = null;
+  private String url = null;
+  private String raceName = null;
+  private Circuit circuit = null;
+  private String date = null;
+  private String time = null;
+  private List<Result> results = null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Race {\n");
+    
+    sb.append("    season: ").append(toIndentedString(season)).append("\n");
+    sb.append("    round: ").append(toIndentedString(round)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    raceName: ").append(toIndentedString(raceName)).append("\n");
+    sb.append("    circuit: ").append(toIndentedString(circuit)).append("\n");
+    sb.append("    date: ").append(toIndentedString(date)).append("\n");
+    sb.append("    time: ").append(toIndentedString(time)).append("\n");
+    sb.append("    results: ").append(toIndentedString(results)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+}
+

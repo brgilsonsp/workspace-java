@@ -1,0 +1,5 @@
+
+#Configuration connection MongoDB
+spring.data.mongodb.database=formula_one_2017_test
+
+spring.jpa.hibernate.ddl-auto=create-drop

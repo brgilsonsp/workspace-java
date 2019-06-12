@@ -1,0 +1,47 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.model.Circuit;
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+import io.swagger.annotations.ApiModelProperty;
+
+public class Race2 {
+  private String season = null;
+  private String round = null;
+  private String url = null;
+  private String raceName = null;
+  private Circuit circuit = null;
+  private String date = null;
+  private String time = null;
+  private List<ResultDocument> results = null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Race {\n");
+    
+    sb.append("    season: ").append(StringHelpders.toIndentedString(season)).append("\n");
+    sb.append("    round: ").append(StringHelpders.toIndentedString(round)).append("\n");
+    sb.append("    url: ").append(StringHelpders.toIndentedString(url)).append("\n");
+    sb.append("    raceName: ").append(StringHelpders.toIndentedString(raceName)).append("\n");
+    sb.append("    circuit: ").append(StringHelpders.toIndentedString(circuit.toString())).append("\n");
+    sb.append("    date: ").append(StringHelpders.toIndentedString(date)).append("\n");
+    sb.append("    time: ").append(StringHelpders.toIndentedString(time)).append("\n");
+    sb.append("    results: ");
+    results.forEach(item -> {
+    	sb.append(item.toString()).append("\n");
+    });
+    sb.append("}");
+    return sb.toString();
+  }
+}
+

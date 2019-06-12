@@ -1,0 +1,18 @@
+package br.com.fcdit.consumerCertApi.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+public class InternConfiguration {
+
+	@Bean
+	public RestTemplate getRestTemplate() {
+		
+		/*System.setProperty("javax.net.ssl.trustStore", "C:\\java\\jdk1.81\\jre\\lib\\security\\cacerts");
+	    System.setProperty("javax.net.ssl.trustStoreType", "PKCS12"); 
+	    System.setProperty("javax.net.ssl.trustStorePassword","1234567");*/
+		return new RestTemplate();
+	}
+}

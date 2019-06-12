@@ -1,0 +1,12 @@
+package br.com.icarros.gilson.formulaone.util;
+
+import br.com.icarros.gilson.formulaone.entity.MRDataDocument;
+
+public class BuildObjectTest {
+
+	public MRDataDocument buildObjectoTomustBeReturnDocumentWithIdWhenSave() {
+		// TODO Auto-generated method stub
+		return new MRDataDocument("XMLNS", "SERIRES", "URL", "LIMIT", "OFFSET", "TOTAL", null);
+	}
+
+}

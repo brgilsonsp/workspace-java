@@ -1,0 +1,26 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.Objects;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+import io.swagger.annotations.ApiModelProperty;
+
+public class TimeFastestLap2   {
+  private String time = null;
+
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class TimeFastestLap {\n");
+    
+    sb.append("    time: ").append(StringHelpders.toIndentedString(time)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+  
+}

@@ -1,0 +1,158 @@
+package br.com.icarros.gilson.formulaone.model;
+
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * Circuit
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-06-09T17:44:54.779Z")
+
+public class Circuit2   {
+  @JsonProperty("circuitId")
+  private String circuitId = null;
+
+  @JsonProperty("url")
+  private String url = null;
+
+  @JsonProperty("circuitName")
+  private String circuitName = null;
+
+  @JsonProperty("Location")
+  private LocationCircuit location = null;
+
+  public Circuit2 circuitId(String circuitId) {
+    this.circuitId = circuitId;
+    return this;
+  }
+
+  /**
+   * Get circuitId
+   * @return circuitId
+  **/
+  @ApiModelProperty(example = "yas_marina", value = "")
+
+
+  public String getCircuitId() {
+    return circuitId;
+  }
+
+  public void setCircuitId(String circuitId) {
+    this.circuitId = circuitId;
+  }
+
+  public Circuit2 url(String url) {
+    this.url = url;
+    return this;
+  }
+
+  /**
+   * Get url
+   * @return url
+  **/
+  @ApiModelProperty(example = "http://yasmarina.com", value = "")
+
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  public Circuit2 circuitName(String circuitName) {
+    this.circuitName = circuitName;
+    return this;
+  }
+
+  /**
+   * Get circuitName
+   * @return circuitName
+  **/
+  @ApiModelProperty(example = "Yas Marina Circuit", value = "")
+
+
+  public String getCircuitName() {
+    return circuitName;
+  }
+
+  public void setCircuitName(String circuitName) {
+    this.circuitName = circuitName;
+  }
+
+  public Circuit2 location(LocationCircuit location) {
+    this.location = location;
+    return this;
+  }
+
+  /**
+   * Get location
+   * @return location
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public LocationCircuit getLocation() {
+    return location;
+  }
+
+  public void setLocation(LocationCircuit location) {
+    this.location = location;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Circuit2 circuit = (Circuit2) o;
+    return Objects.equals(this.circuitId, circuit.circuitId) &&
+        Objects.equals(this.url, circuit.url) &&
+        Objects.equals(this.circuitName, circuit.circuitName) &&
+        Objects.equals(this.location, circuit.location);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(circuitId, url, circuitName, location);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Circuit {\n");
+    
+    sb.append("    circuitId: ").append(toIndentedString(circuitId)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    circuitName: ").append(toIndentedString(circuitName)).append("\n");
+    sb.append("    location: ").append(toIndentedString(location)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

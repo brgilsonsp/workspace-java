@@ -1,0 +1,29 @@
+1560103847924	Rename package 'io.swagger'
+1560103897783	Rename package 'io.swagger.api'
+1560103914781	Rename package 'io.swagger.configuration'
+1560103929726	Rename package 'io.swagger.model'
+1560104031295	Rename type 'Swagger2SpringBoot'
+1560112348393	Delete element
+1560112356867	Delete element
+1560112852180	Delete element
+1560112856002	Delete element
+1560112985588	Copy compilation unit
+1560112992144	Copy compilation units
+1560113003187	Copy compilation units
+1560113387163	Rename type 'TimeResult2'
+1560113390935	Rename type 'TimeResulDocumento'
+1560113666621	Rename type 'TimeFastestLap2'
+1560113903518	Rename type 'Driver2'
+1560114048739	Rename type 'Constructor2'
+1560114380550	Rename type 'FastestLap2'
+1560114425772	Rename type 'AverageSpeed2'
+1560114432900	Rename type 'AverageSpeedDocumento'
+1560114643965	Rename type 'Result2'
+1560115077064	Rename type 'RaceTable2'
+1560115295503	Rename type 'LocationCircuit2'
+1560115384345	Rename field 'lat'
+1560115390254	Rename field '_long'
+1560115477456	Rename type 'Circuit2'
+1560115668469	Rename type 'Race2'
+1560115860555	Rename type 'MRData2'
+1560124931954	Copy file

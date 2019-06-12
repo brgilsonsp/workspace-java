@@ -1,0 +1,255 @@
+package br.com.icarros.gilson.formulaone.model;
+
+import java.util.Objects;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * Driver
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-06-09T17:44:54.779Z")
+
+public class Driver2   {
+  @JsonProperty("driverId")
+  private String driverId = null;
+
+  @JsonProperty("permanentNumber")
+  private String permanentNumber = null;
+
+  @JsonProperty("code")
+  private String code = null;
+
+  @JsonProperty("url")
+  private String url = null;
+
+  @JsonProperty("givenName")
+  private String givenName = null;
+
+  @JsonProperty("familyName")
+  private String familyName = null;
+
+  @JsonProperty("dateOfBirth")
+  private String dateOfBirth = null;
+
+  @JsonProperty("nationality")
+  private String nationality = null;
+
+  public Driver2 driverId(String driverId) {
+    this.driverId = driverId;
+    return this;
+  }
+
+  /**
+   * Get driverId
+   * @return driverId
+  **/
+  @ApiModelProperty(example = "bottas", value = "")
+
+
+  public String getDriverId() {
+    return driverId;
+  }
+
+  public void setDriverId(String driverId) {
+    this.driverId = driverId;
+  }
+
+  public Driver2 permanentNumber(String permanentNumber) {
+    this.permanentNumber = permanentNumber;
+    return this;
+  }
+
+  /**
+   * Get permanentNumber
+   * @return permanentNumber
+  **/
+  @ApiModelProperty(example = "77", value = "")
+
+
+  public String getPermanentNumber() {
+    return permanentNumber;
+  }
+
+  public void setPermanentNumber(String permanentNumber) {
+    this.permanentNumber = permanentNumber;
+  }
+
+  public Driver2 code(String code) {
+    this.code = code;
+    return this;
+  }
+
+  /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(example = "BOT", value = "")
+
+
+  public String getCode() {
+    return code;
+  }
+
+  public void setCode(String code) {
+    this.code = code;
+  }
+
+  public Driver2 url(String url) {
+    this.url = url;
+    return this;
+  }
+
+  /**
+   * Get url
+   * @return url
+  **/
+  @ApiModelProperty(example = "http://bottas.com", value = "")
+
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  public Driver2 givenName(String givenName) {
+    this.givenName = givenName;
+    return this;
+  }
+
+  /**
+   * Get givenName
+   * @return givenName
+  **/
+  @ApiModelProperty(example = "Valtteri", value = "")
+
+
+  public String getGivenName() {
+    return givenName;
+  }
+
+  public void setGivenName(String givenName) {
+    this.givenName = givenName;
+  }
+
+  public Driver2 familyName(String familyName) {
+    this.familyName = familyName;
+    return this;
+  }
+
+  /**
+   * Get familyName
+   * @return familyName
+  **/
+  @ApiModelProperty(example = "Bottas", value = "")
+
+
+  public String getFamilyName() {
+    return familyName;
+  }
+
+  public void setFamilyName(String familyName) {
+    this.familyName = familyName;
+  }
+
+  public Driver2 dateOfBirth(String dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+    return this;
+  }
+
+  /**
+   * Get dateOfBirth
+   * @return dateOfBirth
+  **/
+  @ApiModelProperty(example = "1989-08-28", value = "")
+
+
+  public String getDateOfBirth() {
+    return dateOfBirth;
+  }
+
+  public void setDateOfBirth(String dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+  }
+
+  public Driver2 nationality(String nationality) {
+    this.nationality = nationality;
+    return this;
+  }
+
+  /**
+   * Get nationality
+   * @return nationality
+  **/
+  @ApiModelProperty(example = "Finnish", value = "")
+
+
+  public String getNationality() {
+    return nationality;
+  }
+
+  public void setNationality(String nationality) {
+    this.nationality = nationality;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Driver2 driver = (Driver2) o;
+    return Objects.equals(this.driverId, driver.driverId) &&
+        Objects.equals(this.permanentNumber, driver.permanentNumber) &&
+        Objects.equals(this.code, driver.code) &&
+        Objects.equals(this.url, driver.url) &&
+        Objects.equals(this.givenName, driver.givenName) &&
+        Objects.equals(this.familyName, driver.familyName) &&
+        Objects.equals(this.dateOfBirth, driver.dateOfBirth) &&
+        Objects.equals(this.nationality, driver.nationality);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(driverId, permanentNumber, code, url, givenName, familyName, dateOfBirth, nationality);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Driver {\n");
+    
+    sb.append("    driverId: ").append(toIndentedString(driverId)).append("\n");
+    sb.append("    permanentNumber: ").append(toIndentedString(permanentNumber)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    givenName: ").append(toIndentedString(givenName)).append("\n");
+    sb.append("    familyName: ").append(toIndentedString(familyName)).append("\n");
+    sb.append("    dateOfBirth: ").append(toIndentedString(dateOfBirth)).append("\n");
+    sb.append("    nationality: ").append(toIndentedString(nationality)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

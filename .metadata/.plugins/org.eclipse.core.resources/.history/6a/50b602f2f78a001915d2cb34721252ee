@@ -1,0 +1,12 @@
+package br.com.icarros.gilson.formulaone.utils;
+
+public class StringHelpders {
+
+	public static String toIndentedString(String o) {
+		if (o == null) {
+			return "null";
+		}
+		return o.toString().replace("\n", "\n    ");
+	}
+
+}

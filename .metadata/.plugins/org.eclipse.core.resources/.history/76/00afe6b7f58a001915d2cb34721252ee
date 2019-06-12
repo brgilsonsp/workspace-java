@@ -1,0 +1,9 @@
+package br.com.icarros.gilson.formulaone.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import br.com.icarros.gilson.formulaone.documents.Person;
+
+public interface PersonRepository extends MongoRepository<Person, String> {
+
+}

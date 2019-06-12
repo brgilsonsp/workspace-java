@@ -1,0 +1,3 @@
+
+#Configuration connection MongoDB
+spring.data.mongodb.database=formula_one_2017_test

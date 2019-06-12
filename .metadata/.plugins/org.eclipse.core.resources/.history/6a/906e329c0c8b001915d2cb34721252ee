@@ -1,0 +1,184 @@
+package br.com.icarros.gilson.formulaone.model;
+
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.entity.FastestLapDocument;
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * FastestLap
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-06-09T17:44:54.779Z")
+
+public class FastestLap   {
+  @JsonProperty("rank")
+  private String rank = null;
+
+  @JsonProperty("lap")
+  private String lap = null;
+
+  @JsonProperty("Time")
+  private TimeFastestLap time = null;
+
+  @JsonProperty("AverageSpeed")
+  private AverageSpeed averageSpeed = null;
+
+  public FastestLap rank(String rank) {
+    this.rank = rank;
+    return this;
+  }
+
+  /**
+   * Get rank
+   * @return rank
+  **/
+  @ApiModelProperty(example = "1", value = "")
+
+
+  public String getRank() {
+    return rank;
+  }
+
+  public void setRank(String rank) {
+    this.rank = rank;
+  }
+
+  public FastestLap lap(String lap) {
+    this.lap = lap;
+    return this;
+  }
+
+  /**
+   * Get lap
+   * @return lap
+  **/
+  @ApiModelProperty(example = "52", value = "")
+
+
+  public String getLap() {
+    return lap;
+  }
+
+  public void setLap(String lap) {
+    this.lap = lap;
+  }
+
+  public FastestLap time(TimeFastestLap time) {
+    this.time = time;
+    return this;
+  }
+
+  /**
+   * Get time
+   * @return time
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public TimeFastestLap getTime() {
+    return time;
+  }
+
+  public void setTime(TimeFastestLap time) {
+    this.time = time;
+  }
+
+  public FastestLap averageSpeed(AverageSpeed averageSpeed) {
+    this.averageSpeed = averageSpeed;
+    return this;
+  }
+
+  /**
+   * Get averageSpeed
+   * @return averageSpeed
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public AverageSpeed getAverageSpeed() {
+    return averageSpeed;
+  }
+
+  public void setAverageSpeed(AverageSpeed averageSpeed) {
+    this.averageSpeed = averageSpeed;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    FastestLap fastestLap = (FastestLap) o;
+    return Objects.equals(this.rank, fastestLap.rank) &&
+        Objects.equals(this.lap, fastestLap.lap) &&
+        Objects.equals(this.time, fastestLap.time) &&
+        Objects.equals(this.averageSpeed, fastestLap.averageSpeed);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(rank, lap, time, averageSpeed);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class FastestLap {\n");
+    
+    sb.append("    rank: ").append(toIndentedString(rank)).append("\n");
+    sb.append("    lap: ").append(toIndentedString(lap)).append("\n");
+    sb.append("    time: ").append(toIndentedString(time)).append("\n");
+    sb.append("    averageSpeed: ").append(toIndentedString(averageSpeed)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+  
+  public FastestLap() {
+	}
+
+public FastestLap(String rank, String lap, TimeFastestLap time, AverageSpeed averageSpeed) {
+	this.rank = rank;
+	this.lap = lap;
+	this.time = time;
+	this.averageSpeed = averageSpeed;
+}
+
+public static FastestLap toFastestLapDocument(FastestLapDocument fastestLapDocument) {
+	try {
+		String _rank = fastestLapDocument.getRank();
+		String _lap = fastestLapDocument.getLap();
+		TimeFastestLap _time = TimeFastestLap.toTimeFastestDocumentDocument(fastestLapDocument.getTime());
+		
+		AverageSpeed _averageSpeed = AverageSpeed.toAverageSpeedDocument(fastestLapDocument.getAverageSpeed());
+		
+		return new FastestLap(_rank, _lap, _time, _averageSpeed);
+	} catch (Exception e) {
+		return null;
+	}
+}
+}
+

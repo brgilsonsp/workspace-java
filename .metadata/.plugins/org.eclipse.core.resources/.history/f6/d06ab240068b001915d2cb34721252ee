@@ -1,0 +1,126 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import javax.validation.Valid;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import br.com.icarros.gilson.formulaone.model.Driver;
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+@Document(collection = "driver")
+public class DriverDocument {
+	
+	@Id
+	private String id;
+	private String driverId;
+	private String permanentNumber;
+	private String code;
+	private String url;
+	private String givenName;
+	private String familyName;
+	private String dateOfBirth;
+	private String nationality;
+	
+	public DriverDocument() {
+	}
+	
+	public DriverDocument(String driverId, String permanentNumber, String code, String url, String givenName,
+			String familyName, String dateOfBirth, String nationality) {
+		this.driverId = driverId;
+		this.permanentNumber = permanentNumber;
+		this.code = code;
+		this.url = url;
+		this.givenName = givenName;
+		this.familyName = familyName;
+		this.dateOfBirth = dateOfBirth;
+		this.nationality = nationality;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	public String getDriverId() {
+		return driverId;
+	}
+	public String getPermanentNumber() {
+		return permanentNumber;
+	}
+	public String getCode() {
+		return code;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public String getGivenName() {
+		return givenName;
+	}
+	public String getFamilyName() {
+		return familyName;
+	}
+	public String getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public String getNationality() {
+		return nationality;
+	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((driverId == null) ? 0 : driverId.hashCode());
+		return result;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DriverDocument other = (DriverDocument) obj;
+		if (driverId == null) {
+			if (other.driverId != null)
+				return false;
+		} else if (!driverId.equals(other.driverId))
+			return false;
+		return true;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class DriverDocument {\n");
+
+		sb.append("    driverId: ").append(StringHelpders.toIndentedString(driverId)).append("\n");
+		sb.append("    permanentNumber: ").append(StringHelpders.toIndentedString(permanentNumber)).append("\n");
+		sb.append("    code: ").append(StringHelpders.toIndentedString(code)).append("\n");
+		sb.append("    url: ").append(StringHelpders.toIndentedString(url)).append("\n");
+		sb.append("    givenName: ").append(StringHelpders.toIndentedString(givenName)).append("\n");
+		sb.append("    familyName: ").append(StringHelpders.toIndentedString(familyName)).append("\n");
+		sb.append("    dateOfBirth: ").append(StringHelpders.toIndentedString(dateOfBirth)).append("\n");
+		sb.append("    nationality: ").append(StringHelpders.toIndentedString(nationality)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+	public static DriverDocument toDriver(Driver driver) {
+		try {
+			String _driverId = driver.getDriverId();
+			String _permanentNumber = driver.getPermanentNumber(); 
+			String _code = driver.getCode();
+			String _url = driver.getUrl();
+			String _givenName = driver.getGivenName();
+			String _familyName = driver.getFamilyName();
+			String _dateOfBirth = driver.getDateOfBirth();
+			String _nationality = driver.getNationality();
+			
+			return new DriverDocument(_driverId, _permanentNumber, _code, _url, _givenName, _familyName, _dateOfBirth, _nationality);
+		} catch (Exception e) {
+			return null;
+		}
+	}
+
+}

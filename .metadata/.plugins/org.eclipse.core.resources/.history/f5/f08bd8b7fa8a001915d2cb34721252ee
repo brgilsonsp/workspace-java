@@ -1,0 +1,26 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import br.com.icarros.gilson.formulaone.model.AverageSpeed;
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+
+public class FastestLapDocument   {
+  private String rank = null;
+  private String lap = null;
+  private TimeFastestLapDocument time = null;
+  private AverageSpeed averageSpeed = null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class FastestLapDocument {\n");
+    
+    sb.append("    rank: ").append(StringHelpders.toIndentedString(rank)).append("\n");
+    sb.append("    lap: ").append(StringHelpders.toIndentedString(lap)).append("\n");
+    sb.append("    time: ").append(StringHelpders.toIndentedString(time.toString())).append("\n");
+    sb.append("    averageSpeed: ").append(StringHelpders.toIndentedString(averageSpeed.toString())).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+}
+

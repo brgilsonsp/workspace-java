@@ -1,0 +1,5 @@
+package br.com.alura.funcionarios.api.swagger.configuration;
+
+public class SwaggerConfiguration {
+
+}

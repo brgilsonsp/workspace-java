@@ -1,0 +1,30 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+@Document(collection = "location_circuit")
+public class LocationCircuitDocument {
+	
+	@Id
+	private String id;
+	private String latitude;
+	private String longitude;
+	private String locality;
+	private String country;
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class LocationCircuitDocument {\n");
+
+		sb.append("    latitude: ").append(StringHelpders.toIndentedString(latitude)).append("\n");
+		sb.append("    longitude: ").append(StringHelpders.toIndentedString(longitude)).append("\n");
+		sb.append("    locality: ").append(StringHelpders.toIndentedString(locality)).append("\n");
+		sb.append("    country: ").append(StringHelpders.toIndentedString(country)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+}

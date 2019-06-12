@@ -1,0 +1,94 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import javax.validation.Valid;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import br.com.icarros.gilson.formulaone.model.Constructor;
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+@Document(collection = "constructor")
+public class ConstructorDocument {
+
+	@Id
+	private String id;
+	private String constructorId;
+	private String url;
+	private String name;
+	private String nationality;
+
+	public ConstructorDocument() {
+	}
+	
+	public ConstructorDocument(String constructorId, String url, String name, String nationality) {
+		this.constructorId = constructorId;
+		this.url = url;
+		this.name = name;
+		this.nationality = nationality;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getConstructorId() {
+		return constructorId;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getNationality() {
+		return nationality;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((constructorId == null) ? 0 : constructorId.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ConstructorDocument other = (ConstructorDocument) obj;
+		if (constructorId == null) {
+			if (other.constructorId != null)
+				return false;
+		} else if (!constructorId.equals(other.constructorId))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class ConstructorDocument {\n");
+
+		sb.append("    constructorId: ").append(StringHelpders.toIndentedString(constructorId)).append("\n");
+		sb.append("    url: ").append(StringHelpders.toIndentedString(url)).append("\n");
+		sb.append("    name: ").append(StringHelpders.toIndentedString(name)).append("\n");
+		sb.append("    nationality: ").append(StringHelpders.toIndentedString(nationality)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+
+	public static ConstructorDocument toConstructor(@Valid Constructor constructor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

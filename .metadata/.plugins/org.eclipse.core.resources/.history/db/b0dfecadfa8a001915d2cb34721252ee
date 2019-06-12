@@ -1,0 +1,29 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.Objects;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+import io.swagger.annotations.ApiModelProperty;
+
+@Document(collection="average_speed")
+public class AverageSpeedDocument   {
+  private String units = null;
+  private String speed = null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class AverageSpeedDocument {\n");
+    
+    sb.append("    units: ").append(StringHelpders.toIndentedString(units)).append("\n");
+    sb.append("    speed: ").append(StringHelpders.toIndentedString(speed)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+}
+

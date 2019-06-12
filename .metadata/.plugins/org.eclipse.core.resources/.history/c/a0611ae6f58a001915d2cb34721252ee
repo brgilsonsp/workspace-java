@@ -1,0 +1,342 @@
+package br.com.icarros.gilson.formulaone.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.model.Constructor;
+import br.com.icarros.gilson.formulaone.model.Driver;
+import br.com.icarros.gilson.formulaone.model.FastestLap;
+import br.com.icarros.gilson.formulaone.model.TimeResult;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * Result
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-06-09T17:44:54.779Z")
+
+public class Result   {
+  @JsonProperty("number")
+  private String number = null;
+
+  @JsonProperty("position")
+  private String position = null;
+
+  @JsonProperty("positionText")
+  private String positionText = null;
+
+  @JsonProperty("points")
+  private String points = null;
+
+  @JsonProperty("Driver")
+  private Driver driver = null;
+
+  @JsonProperty("Constructor")
+  private Constructor constructor = null;
+
+  @JsonProperty("grid")
+  private String grid = null;
+
+  @JsonProperty("laps")
+  private String laps = null;
+
+  @JsonProperty("status")
+  private String status = null;
+
+  @JsonProperty("Time")
+  private TimeResult time = null;
+
+  @JsonProperty("FastestLap")
+  private FastestLap fastestLap = null;
+
+  public Result number(String number) {
+    this.number = number;
+    return this;
+  }
+
+  /**
+   * Get number
+   * @return number
+  **/
+  @ApiModelProperty(example = "77", value = "")
+
+
+  public String getNumber() {
+    return number;
+  }
+
+  public void setNumber(String number) {
+    this.number = number;
+  }
+
+  public Result position(String position) {
+    this.position = position;
+    return this;
+  }
+
+  /**
+   * Get position
+   * @return position
+  **/
+  @ApiModelProperty(example = "1", value = "")
+
+
+  public String getPosition() {
+    return position;
+  }
+
+  public void setPosition(String position) {
+    this.position = position;
+  }
+
+  public Result positionText(String positionText) {
+    this.positionText = positionText;
+    return this;
+  }
+
+  /**
+   * Get positionText
+   * @return positionText
+  **/
+  @ApiModelProperty(example = "1", value = "")
+
+
+  public String getPositionText() {
+    return positionText;
+  }
+
+  public void setPositionText(String positionText) {
+    this.positionText = positionText;
+  }
+
+  public Result points(String points) {
+    this.points = points;
+    return this;
+  }
+
+  /**
+   * Get points
+   * @return points
+  **/
+  @ApiModelProperty(example = "1", value = "")
+
+
+  public String getPoints() {
+    return points;
+  }
+
+  public void setPoints(String points) {
+    this.points = points;
+  }
+
+  public Result driver(Driver driver) {
+    this.driver = driver;
+    return this;
+  }
+
+  /**
+   * Get driver
+   * @return driver
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public Driver getDriver() {
+    return driver;
+  }
+
+  public void setDriver(Driver driver) {
+    this.driver = driver;
+  }
+
+  public Result constructor(Constructor constructor) {
+    this.constructor = constructor;
+    return this;
+  }
+
+  /**
+   * Get constructor
+   * @return constructor
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public Constructor getConstructor() {
+    return constructor;
+  }
+
+  public void setConstructor(Constructor constructor) {
+    this.constructor = constructor;
+  }
+
+  public Result grid(String grid) {
+    this.grid = grid;
+    return this;
+  }
+
+  /**
+   * Get grid
+   * @return grid
+  **/
+  @ApiModelProperty(example = "1", value = "")
+
+
+  public String getGrid() {
+    return grid;
+  }
+
+  public void setGrid(String grid) {
+    this.grid = grid;
+  }
+
+  public Result laps(String laps) {
+    this.laps = laps;
+    return this;
+  }
+
+  /**
+   * Get laps
+   * @return laps
+  **/
+  @ApiModelProperty(example = "55", value = "")
+
+
+  public String getLaps() {
+    return laps;
+  }
+
+  public void setLaps(String laps) {
+    this.laps = laps;
+  }
+
+  public Result status(String status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(example = "55", value = "")
+
+
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public Result time(TimeResult time) {
+    this.time = time;
+    return this;
+  }
+
+  /**
+   * Get time
+   * @return time
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public TimeResult getTime() {
+    return time;
+  }
+
+  public void setTime(TimeResult time) {
+    this.time = time;
+  }
+
+  public Result fastestLap(FastestLap fastestLap) {
+    this.fastestLap = fastestLap;
+    return this;
+  }
+
+  /**
+   * Get fastestLap
+   * @return fastestLap
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public FastestLap getFastestLap() {
+    return fastestLap;
+  }
+
+  public void setFastestLap(FastestLap fastestLap) {
+    this.fastestLap = fastestLap;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Result result = (Result) o;
+    return Objects.equals(this.number, result.number) &&
+        Objects.equals(this.position, result.position) &&
+        Objects.equals(this.positionText, result.positionText) &&
+        Objects.equals(this.points, result.points) &&
+        Objects.equals(this.driver, result.driver) &&
+        Objects.equals(this.constructor, result.constructor) &&
+        Objects.equals(this.grid, result.grid) &&
+        Objects.equals(this.laps, result.laps) &&
+        Objects.equals(this.status, result.status) &&
+        Objects.equals(this.time, result.time) &&
+        Objects.equals(this.fastestLap, result.fastestLap);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(number, position, positionText, points, driver, constructor, grid, laps, status, time, fastestLap);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Result {\n");
+    
+    sb.append("    number: ").append(toIndentedString(number)).append("\n");
+    sb.append("    position: ").append(toIndentedString(position)).append("\n");
+    sb.append("    positionText: ").append(toIndentedString(positionText)).append("\n");
+    sb.append("    points: ").append(toIndentedString(points)).append("\n");
+    sb.append("    driver: ").append(toIndentedString(driver)).append("\n");
+    sb.append("    constructor: ").append(toIndentedString(constructor)).append("\n");
+    sb.append("    grid: ").append(toIndentedString(grid)).append("\n");
+    sb.append("    laps: ").append(toIndentedString(laps)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    time: ").append(toIndentedString(time)).append("\n");
+    sb.append("    fastestLap: ").append(toIndentedString(fastestLap)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

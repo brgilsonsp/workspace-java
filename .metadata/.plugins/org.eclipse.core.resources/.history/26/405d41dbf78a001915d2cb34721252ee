@@ -1,0 +1,33 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.Objects;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModelProperty;
+
+public class TimeResult2   {
+	
+	
+  private String millis;
+  private String time;
+
+  public String getTime() {
+    return time;
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class TimeResult {\n");
+    
+    sb.append("    millis: ").append(toIndentedString(millis)).append("\n");
+    sb.append("    time: ").append(toIndentedString(time)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+}
+

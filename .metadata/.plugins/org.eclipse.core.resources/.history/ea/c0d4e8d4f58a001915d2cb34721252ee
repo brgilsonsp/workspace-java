@@ -1,0 +1,106 @@
+package br.com.icarros.gilson.formulaone.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * AverageSpeed
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-06-09T17:44:54.779Z")
+
+public class AverageSpeed   {
+  @JsonProperty("units")
+  private String units = null;
+
+  @JsonProperty("speed")
+  private String speed = null;
+
+  public AverageSpeed units(String units) {
+    this.units = units;
+    return this;
+  }
+
+  /**
+   * Get units
+   * @return units
+  **/
+  @ApiModelProperty(example = "kph", value = "")
+
+
+  public String getUnits() {
+    return units;
+  }
+
+  public void setUnits(String units) {
+    this.units = units;
+  }
+
+  public AverageSpeed speed(String speed) {
+    this.speed = speed;
+    return this;
+  }
+
+  /**
+   * Get speed
+   * @return speed
+  **/
+  @ApiModelProperty(example = "198.652", value = "")
+
+
+  public String getSpeed() {
+    return speed;
+  }
+
+  public void setSpeed(String speed) {
+    this.speed = speed;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    AverageSpeed averageSpeed = (AverageSpeed) o;
+    return Objects.equals(this.units, averageSpeed.units) &&
+        Objects.equals(this.speed, averageSpeed.speed);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(units, speed);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class AverageSpeed {\n");
+    
+    sb.append("    units: ").append(toIndentedString(units)).append("\n");
+    sb.append("    speed: ").append(toIndentedString(speed)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

@@ -1,0 +1,14 @@
+package br.com.icarros.gilson.formulaone.util;
+
+import org.springframework.context.annotation.Configuration;
+
+import br.com.icarros.gilson.formulaone.entity.MRDataDocument;
+
+@Configuration
+public class BuildObjectTest {
+
+	public MRDataDocument buildObjectoTomustBeReturnDocumentWithIdWhenSave() {
+		return new MRDataDocument("XMLNS", "SERIRES", "URL", "LIMIT", "OFFSET", "TOTAL", null);
+	}
+
+}

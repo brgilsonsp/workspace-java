@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="testCertApi"/>
+<aop-project name="consumerCertApi"/>
+<aop-project name="formula-one-api"/>
+<aop-project name="byte-bank-api-swagger"/>
+<aop-project name="funcionarios-api"/>
+</aop-reference-model>

@@ -1,0 +1,45 @@
+package br.com.icarros.gilson.formulaone.repository;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import br.com.icarros.gilson.formulaone.FormulaOne;
+import br.com.icarros.gilson.formulaone.entity.MRDataDocument;
+import br.com.icarros.gilson.formulaone.util.BuildObjectTest;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes=FormulaOne.class)
+@DefaultProperties
+public class MRDataDocumentRepositoryTest {
+	
+	@Autowired
+	private MRDataDocumentRepository repository;
+	
+	private BuildObjectTest objectTest = new BuildObjectTest();
+	
+	@Test
+	public void mustBeReturnDocumentWithIdWhenSave() {
+		//Create scenario
+		Exception exception = null;
+		MRDataDocument managed = null;
+		MRDataDocument detached = this.objectTest.buildObjectoTomustBeReturnDocumentWithIdWhenSave();
+		
+		//Execute operation
+		try {
+			managed = this.repository.save(detached);
+		} catch (Exception e) {
+			exception = e;
+		}
+		
+		//Execute tests
+		assertThat(exception).isNull();
+		assertThat(managed).isNotNull();
+		assertThat(managed.getId()).isBlank();//.isNotBlank();
+	}
+
+}

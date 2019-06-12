@@ -1,0 +1,49 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+import io.swagger.annotations.ApiModelProperty;
+
+@Document(collection="result")
+public class ResultDocument   {
+  private String number = null;
+  private String position = null;
+  private String positionText = null;
+  private String points = null;
+  private DriverDocument driver = null;
+  private ConstructorDocument constructor = null;
+  private String grid = null;
+  private String laps = null;
+  private String status = null;
+  private TimeResulDocument time = null;
+  private FastestLapDocument fastestLap = null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Result {\n");
+    
+    sb.append("    number: ").append(StringHelpders.toIndentedString(number)).append("\n");
+    sb.append("    position: ").append(StringHelpders.toIndentedString(position)).append("\n");
+    sb.append("    positionText: ").append(StringHelpders.toIndentedString(positionText)).append("\n");
+    sb.append("    points: ").append(StringHelpders.toIndentedString(points)).append("\n");
+    sb.append("    driver: ").append(StringHelpders.toIndentedString(driver.toString())).append("\n");
+    sb.append("    constructor: ").append(StringHelpders.toIndentedString(constructor.toString())).append("\n");
+    sb.append("    grid: ").append(StringHelpders.toIndentedString(grid)).append("\n");
+    sb.append("    laps: ").append(StringHelpders.toIndentedString(laps)).append("\n");
+    sb.append("    status: ").append(StringHelpders.toIndentedString(status)).append("\n");
+    sb.append("    time: ").append(StringHelpders.toIndentedString(time.toString())).append("\n");
+    sb.append("    fastestLap: ").append(StringHelpders.toIndentedString(fastestLap.toString())).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+}
+

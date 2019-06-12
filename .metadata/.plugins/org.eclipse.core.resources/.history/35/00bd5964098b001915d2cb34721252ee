@@ -1,0 +1,276 @@
+package br.com.icarros.gilson.formulaone.model;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.entity.RaceDocument;
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * Race
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-06-09T17:44:54.779Z")
+
+public class Race {
+	@JsonProperty("season")
+	private String season = null;
+
+	@JsonProperty("round")
+	private String round = null;
+
+	@JsonProperty("url")
+	private String url = null;
+
+	@JsonProperty("raceName")
+	private String raceName = null;
+
+	@JsonProperty("Circuit")
+	private Circuit circuit = null;
+
+	@JsonProperty("date")
+	private String date = null;
+
+	@JsonProperty("time")
+	private String time = null;
+
+	@JsonProperty("Results")
+	@Valid
+	private List<Result> results = null;
+
+	public Race season(String season) {
+		this.season = season;
+		return this;
+	}
+
+	/**
+	 * Get season
+	 * 
+	 * @return season
+	 **/
+	@ApiModelProperty(example = "2017", value = "")
+
+	public String getSeason() {
+		return season;
+	}
+
+	public void setSeason(String season) {
+		this.season = season;
+	}
+
+	public Race round(String round) {
+		this.round = round;
+		return this;
+	}
+
+	/**
+	 * Get round
+	 * 
+	 * @return round
+	 **/
+	@ApiModelProperty(example = "20", value = "")
+
+	public String getRound() {
+		return round;
+	}
+
+	public void setRound(String round) {
+		this.round = round;
+	}
+
+	public Race url(String url) {
+		this.url = url;
+		return this;
+	}
+
+	/**
+	 * Get url
+	 * 
+	 * @return url
+	 **/
+	@ApiModelProperty(example = "http://formula12017.com", value = "")
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public Race raceName(String raceName) {
+		this.raceName = raceName;
+		return this;
+	}
+
+	/**
+	 * Get raceName
+	 * 
+	 * @return raceName
+	 **/
+	@ApiModelProperty(example = "Abu Dhabi Grand Prix", value = "")
+
+	public String getRaceName() {
+		return raceName;
+	}
+
+	public void setRaceName(String raceName) {
+		this.raceName = raceName;
+	}
+
+	public Race circuit(Circuit circuit) {
+		this.circuit = circuit;
+		return this;
+	}
+
+	/**
+	 * Get circuit
+	 * 
+	 * @return circuit
+	 **/
+	@ApiModelProperty(value = "")
+
+	@Valid
+
+	public Circuit getCircuit() {
+		return circuit;
+	}
+
+	public void setCircuit(Circuit circuit) {
+		this.circuit = circuit;
+	}
+
+	public Race date(String date) {
+		this.date = date;
+		return this;
+	}
+
+	/**
+	 * Get date
+	 * 
+	 * @return date
+	 **/
+	@ApiModelProperty(example = "2017-11-26", value = "")
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public Race time(String time) {
+		this.time = time;
+		return this;
+	}
+
+	/**
+	 * Get time
+	 * 
+	 * @return time
+	 **/
+	@ApiModelProperty(example = "13:00:00Z", value = "")
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+	public Race results(List<Result> results) {
+		this.results = results;
+		return this;
+	}
+
+	public Race addResultsItem(Result resultsItem) {
+		if (this.results == null) {
+			this.results = new ArrayList<Result>();
+		}
+		this.results.add(resultsItem);
+		return this;
+	}
+
+	/**
+	 * Get results
+	 * 
+	 * @return results
+	 **/
+	@ApiModelProperty(value = "")
+
+	@Valid
+
+	public List<Result> getResults() {
+		return results;
+	}
+
+	public void setResults(List<Result> results) {
+		this.results = results;
+	}
+
+	@Override
+	public boolean equals(java.lang.Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (o == null || getClass() != o.getClass()) {
+			return false;
+		}
+		Race race = (Race) o;
+		return Objects.equals(this.season, race.season) && Objects.equals(this.round, race.round)
+				&& Objects.equals(this.url, race.url) && Objects.equals(this.raceName, race.raceName)
+				&& Objects.equals(this.circuit, race.circuit) && Objects.equals(this.date, race.date)
+				&& Objects.equals(this.time, race.time) && Objects.equals(this.results, race.results);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(season, round, url, raceName, circuit, date, time, results);
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class Race {\n");
+
+		sb.append("    season: ").append(toIndentedString(season)).append("\n");
+		sb.append("    round: ").append(toIndentedString(round)).append("\n");
+		sb.append("    url: ").append(toIndentedString(url)).append("\n");
+		sb.append("    raceName: ").append(toIndentedString(raceName)).append("\n");
+		sb.append("    circuit: ").append(toIndentedString(circuit)).append("\n");
+		sb.append("    date: ").append(toIndentedString(date)).append("\n");
+		sb.append("    time: ").append(toIndentedString(time)).append("\n");
+		sb.append("    results: ").append(toIndentedString(results)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+
+	/**
+	 * Convert the given object to string with each line indented by 4 spaces
+	 * (except the first line).
+	 */
+	private String toIndentedString(java.lang.Object o) {
+		if (o == null) {
+			return "null";
+		}
+		return o.toString().replace("\n", "\n    ");
+	}
+
+	public boolean hasResults() {
+		return this.results != null && this.results.size() > 0;
+	}
+
+	public static Race toRaceDocument(RaceDocument item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

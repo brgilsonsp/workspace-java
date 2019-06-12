@@ -1,0 +1,170 @@
+package br.com.icarros.gilson.formulaone.model;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.entity.RaceTableDocument;
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * RaceTable
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-06-09T17:44:54.779Z")
+
+public class RaceTable {
+	@JsonProperty("season")
+	private String season = null;
+
+	@JsonProperty("round")
+	private String round = null;
+
+	@JsonProperty("Races")
+	@Valid
+	private List<Race> races = null;
+
+	public RaceTable season(String season) {
+		this.season = season;
+		return this;
+	}
+
+	/**
+	 * Get season
+	 * 
+	 * @return season
+	 **/
+	@ApiModelProperty(example = "2017", value = "")
+
+	public String getSeason() {
+		return season;
+	}
+
+	public void setSeason(String season) {
+		this.season = season;
+	}
+
+	public RaceTable round(String round) {
+		this.round = round;
+		return this;
+	}
+
+	/**
+	 * Get round
+	 * 
+	 * @return round
+	 **/
+	@ApiModelProperty(example = "20", value = "")
+
+	public String getRound() {
+		return round;
+	}
+
+	public void setRound(String round) {
+		this.round = round;
+	}
+
+	public RaceTable races(List<Race> races) {
+		this.races = races;
+		return this;
+	}
+
+	public RaceTable addRacesItem(Race racesItem) {
+		if (this.races == null) {
+			this.races = new ArrayList<Race>();
+		}
+		this.races.add(racesItem);
+		return this;
+	}
+
+	/**
+	 * Get races
+	 * 
+	 * @return races
+	 **/
+	@ApiModelProperty(value = "")
+
+	@Valid
+
+	public List<Race> getRaces() {
+		return races;
+	}
+
+	public void setRaces(List<Race> races) {
+		this.races = races;
+	}
+
+	@Override
+	public boolean equals(java.lang.Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (o == null || getClass() != o.getClass()) {
+			return false;
+		}
+		RaceTable raceTable = (RaceTable) o;
+		return Objects.equals(this.season, raceTable.season) && Objects.equals(this.round, raceTable.round)
+				&& Objects.equals(this.races, raceTable.races);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(season, round, races);
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class RaceTable {\n");
+
+		sb.append("    season: ").append(toIndentedString(season)).append("\n");
+		sb.append("    round: ").append(toIndentedString(round)).append("\n");
+		sb.append("    races: ").append(toIndentedString(races)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+
+	/**
+	 * Convert the given object to string with each line indented by 4 spaces
+	 * (except the first line).
+	 */
+	private String toIndentedString(java.lang.Object o) {
+		if (o == null) {
+			return "null";
+		}
+		return o.toString().replace("\n", "\n    ");
+	}
+
+	@JsonIgnore
+	public boolean hasRaces() {
+		return this.races != null && this.races.size() > 0;
+	}
+
+	public RaceTable() {
+	}
+	
+	public RaceTable(String season, String round, @Valid List<Race> races) {
+		this.season = season;
+		this.round = round;
+		this.races = races;
+	}
+
+	public static RaceTable toRaceTableDocument(RaceTableDocument raceTable) {
+		try {
+			String _season = raceTable.getSeason();
+			String _round = raceTable.getRound();
+			List<Race> _races = RaceTable.buildToListRaceDocument(raceTable.getRaces());
+			
+			return new RaceTable(_season, _round, _races);
+		} catch (Exception e) {
+			return null;
+		}
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.com.caelum.jms.TesteConsumidos&apos; to &apos;TesteConsumidor&apos;&#x0D;&#x0A;- Original project: &apos;jms&apos;&#x0D;&#x0A;- Original element: &apos;br.com.caelum.jms.TesteConsumidos&apos;&#x0D;&#x0A;- Renamed element: &apos;br.com.caelum.jms.TesteConsumidor&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TesteConsumidos&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.com.caelum.jms{TesteConsumidos.java[TesteConsumidos" matchStrategy="1" name="TesteConsumidor" qualified="false" references="true" similarDeclarations="false" stamp="1538922772450" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,74 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModelProperty;
+
+public class Result2   {
+  private String number = null;
+  private String position = null;
+  private String positionText = null;
+  private String points = null;
+  private DriverDocument driver = null;
+  private ConstructorDocument constructor = null;
+  private String grid = null;
+  private String laps = null;
+  private String status = null;
+  private TimeResulDocument time = null;
+  private FastestLapDocument fastestLap = null;
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Result2 result = (Result2) o;
+    return Objects.equals(this.number, result.number) &&
+        Objects.equals(this.position, result.position) &&
+        Objects.equals(this.positionText, result.positionText) &&
+        Objects.equals(this.points, result.points) &&
+        Objects.equals(this.driver, result.driver) &&
+        Objects.equals(this.constructor, result.constructor) &&
+        Objects.equals(this.grid, result.grid) &&
+        Objects.equals(this.laps, result.laps) &&
+        Objects.equals(this.status, result.status) &&
+        Objects.equals(this.time, result.time) &&
+        Objects.equals(this.fastestLap, result.fastestLap);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(number, position, positionText, points, driver, constructor, grid, laps, status, time, fastestLap);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Result {\n");
+    
+    sb.append("    number: ").append(toIndentedString(number)).append("\n");
+    sb.append("    position: ").append(toIndentedString(position)).append("\n");
+    sb.append("    positionText: ").append(toIndentedString(positionText)).append("\n");
+    sb.append("    points: ").append(toIndentedString(points)).append("\n");
+    sb.append("    driver: ").append(toIndentedString(driver)).append("\n");
+    sb.append("    constructor: ").append(toIndentedString(constructor)).append("\n");
+    sb.append("    grid: ").append(toIndentedString(grid)).append("\n");
+    sb.append("    laps: ").append(toIndentedString(laps)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    time: ").append(toIndentedString(time)).append("\n");
+    sb.append("    fastestLap: ").append(toIndentedString(fastestLap)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+}
+

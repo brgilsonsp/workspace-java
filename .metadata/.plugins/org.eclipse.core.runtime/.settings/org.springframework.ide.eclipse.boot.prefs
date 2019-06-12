@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-rest=2
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=3
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=3
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=demoBotScope
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=2.0.6.RELEASE
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Demo for BotScope
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=br.com.dds.demobotscope
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=1.8
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=demoBotScope
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=br.com.dds.demobotscope
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=war
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.version=0.0.1-SNAPSHOT
+org.springframework.ide.eclipse.boot.wizard.initializr.url=https\://start.spring.io\n

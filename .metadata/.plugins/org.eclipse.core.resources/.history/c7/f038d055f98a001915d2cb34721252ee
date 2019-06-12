@@ -1,0 +1,37 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+
+@Document(collection="driver")
+public class DriverDocument   {
+  private String driverId = null;
+  private String permanentNumber = null;
+  private String code = null;
+  private String url = null;
+  private String givenName = null;
+  private String familyName = null;
+  private String dateOfBirth = null;
+  private String nationality = null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Driver {\n");
+    
+    sb.append("    driverId: ").append(StringHelpders.toIndentedString(driverId)).append("\n");
+    sb.append("    permanentNumber: ").append(StringHelpders.toIndentedString(permanentNumber)).append("\n");
+    sb.append("    code: ").append(StringHelpders.toIndentedString(code)).append("\n");
+    sb.append("    url: ").append(StringHelpders.toIndentedString(url)).append("\n");
+    sb.append("    givenName: ").append(StringHelpders.toIndentedString(givenName)).append("\n");
+    sb.append("    familyName: ").append(StringHelpders.toIndentedString(familyName)).append("\n");
+    sb.append("    dateOfBirth: ").append(StringHelpders.toIndentedString(dateOfBirth)).append("\n");
+    sb.append("    nationality: ").append(StringHelpders.toIndentedString(nationality)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+}
+

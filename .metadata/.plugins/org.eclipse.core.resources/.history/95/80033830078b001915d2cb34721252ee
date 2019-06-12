@@ -1,0 +1,59 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+@Document(collection = "time_fastest_lap")
+public class TimeFastestLapDocument {
+
+	@Id
+	private String id;
+
+	private String timeLap;
+
+	public String getId() {
+		return id;
+	}
+
+	public String getTimeLap() {
+		return timeLap;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((timeLap == null) ? 0 : timeLap.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TimeFastestLapDocument other = (TimeFastestLapDocument) obj;
+		if (timeLap == null) {
+			if (other.timeLap != null)
+				return false;
+		} else if (!timeLap.equals(other.timeLap))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class TimeFastestLapDocument {\n");
+
+		sb.append("    timeLap: ").append(StringHelpders.toIndentedString(timeLap)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+
+}

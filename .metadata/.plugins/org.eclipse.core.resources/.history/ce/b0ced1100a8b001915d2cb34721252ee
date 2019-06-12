@@ -1,0 +1,161 @@
+package br.com.icarros.gilson.formulaone.model;
+
+import java.util.Objects;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.entity.LocationCircuitDocument;
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * LocationCircuit
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-06-09T17:44:54.779Z")
+
+public class LocationCircuit   {
+  @JsonProperty("lat")
+  private String lat = null;
+
+  @JsonProperty("long")
+  private String _long = null;
+
+  @JsonProperty("locality")
+  private String locality = null;
+
+  @JsonProperty("country")
+  private String country = null;
+
+  public LocationCircuit lat(String lat) {
+    this.lat = lat;
+    return this;
+  }
+
+  /**
+   * Get lat
+   * @return lat
+  **/
+  @ApiModelProperty(example = "24.4685", value = "")
+
+
+  public String getLat() {
+    return lat;
+  }
+
+  public void setLat(String lat) {
+    this.lat = lat;
+  }
+
+  public LocationCircuit _long(String _long) {
+    this._long = _long;
+    return this;
+  }
+
+  /**
+   * Get _long
+   * @return _long
+  **/
+  @ApiModelProperty(example = "55.9685", value = "")
+
+
+  public String getLong() {
+    return _long;
+  }
+
+  public void setLong(String _long) {
+    this._long = _long;
+  }
+
+  public LocationCircuit locality(String locality) {
+    this.locality = locality;
+    return this;
+  }
+
+  /**
+   * Get locality
+   * @return locality
+  **/
+  @ApiModelProperty(example = "Abu Dhabi", value = "")
+
+
+  public String getLocality() {
+    return locality;
+  }
+
+  public void setLocality(String locality) {
+    this.locality = locality;
+  }
+
+  public LocationCircuit country(String country) {
+    this.country = country;
+    return this;
+  }
+
+  /**
+   * Get country
+   * @return country
+  **/
+  @ApiModelProperty(example = "UAE", value = "")
+
+
+  public String getCountry() {
+    return country;
+  }
+
+  public void setCountry(String country) {
+    this.country = country;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    LocationCircuit locationCircuit = (LocationCircuit) o;
+    return Objects.equals(this.lat, locationCircuit.lat) &&
+        Objects.equals(this._long, locationCircuit._long) &&
+        Objects.equals(this.locality, locationCircuit.locality) &&
+        Objects.equals(this.country, locationCircuit.country);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(lat, _long, locality, country);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class LocationCircuit {\n");
+    
+    sb.append("    lat: ").append(toIndentedString(lat)).append("\n");
+    sb.append("    _long: ").append(toIndentedString(_long)).append("\n");
+    sb.append("    locality: ").append(toIndentedString(locality)).append("\n");
+    sb.append("    country: ").append(toIndentedString(country)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+
+public static LocationCircuit toLocationCircuitDocument(LocationCircuitDocument location) {
+	// TODO Auto-generated method stub
+	return null;
+}
+}
+

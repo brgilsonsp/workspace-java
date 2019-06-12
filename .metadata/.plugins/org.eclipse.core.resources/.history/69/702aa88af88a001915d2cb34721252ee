@@ -1,0 +1,39 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+@Document(collection = "time_result")
+public class TimeResulDocument {
+
+	@Id
+	private String id;
+	
+	private String millis;
+	private String timeRace;
+	
+	public String getId() {
+		return id;
+	}
+
+	public String getMillis() {
+		return millis;
+	}
+	public String getTimeRace() {
+		return timeRace;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class TimeResulDocument {\n");
+
+		sb.append("    millis: ").append(StringHelpders.toIndentedString(millis)).append("\n");
+		sb.append("    timeRace: ").append(StringHelpders.toIndentedString(timeRace)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+
+}

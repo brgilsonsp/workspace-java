@@ -1,0 +1,56 @@
+package br.com.fcdit.consumerCertApi.config;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.security.KeyStore;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.cert.CertificateException;
+
+import javax.net.ssl.KeyManager;
+import javax.net.ssl.KeyManagerFactory;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.TrustManagerFactory;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+public class InternConfiguration {
+
+	@Bean
+	public RestTemplate getRestTemplate() throws Exception {
+		
+		String keystoreType = "PKCS12";
+	    InputStream keystoreLocation = null;
+	    char [] keystorePassword = null;
+	    char [] keyPassword = null;
+
+	    KeyStore keystore = KeyStore.getInstance(keystoreType);
+	    keystore.load(keystoreLocation, keystorePassword);
+	    KeyManagerFactory kmfactory = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
+	    kmfactory.init(keystore, keyPassword);
+
+	    InputStream truststoreLocation = null;
+	    char [] truststorePassword = null;
+	    String truststoreType = keystoreType;
+
+	    KeyStore truststore = KeyStore.getInstance(truststoreType);
+	    truststore.load(truststoreLocation, truststorePassword);
+	    TrustManagerFactory tmfactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+
+	    KeyManager [] keymanagers = kmfactory.getKeyManagers();
+	    TrustManager [] trustmanagers =  tmfactory.getTrustManagers();
+
+	    SSLContext sslContext = SSLContext.getInstance("TLS");
+	    sslContext.init(keymanagers, trustmanagers, new SecureRandom());
+	    SSLContext.setDefault(sslContext);
+		
+		/*System.setProperty("javax.net.ssl.trustStore", "C:\\java\\jdk1.81\\jre\\lib\\security\\cacerts");
+	    System.setProperty("javax.net.ssl.trustStoreType", "PKCS12"); 
+	    System.setProperty("javax.net.ssl.trustStorePassword","1234567");*/
+		return new RestTemplate();
+	}
+}

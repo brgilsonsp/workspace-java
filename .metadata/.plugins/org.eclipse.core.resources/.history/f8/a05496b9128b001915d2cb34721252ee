@@ -1,0 +1,7 @@
+package br.com.icarros.gilson.formulaone.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface MRDataDocumentRepository extends MongoRepository<MRDataDocument, String> {
+
+}

@@ -1,0 +1,112 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import br.com.icarros.gilson.formulaone.model.RaceTable;
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+@Document(collection = "race_table")
+public class RaceTableDocument {
+	@Id
+	private String id;
+	private String season;
+	private String round;
+	private List<RaceDocument> races;
+
+	public RaceTableDocument() {
+	}
+
+	public RaceTableDocument(String season, String round, List<RaceDocument> races) {
+		super();
+		this.season = season;
+		this.round = round;
+		this.races = races;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getSeason() {
+		return season;
+	}
+
+	public String getRound() {
+		return round;
+	}
+
+	public List<RaceDocument> getRaces() {
+		return races;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		RaceTableDocument other = (RaceTableDocument) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class RaceTable {\n");
+
+		sb.append("    season: ").append(StringHelpders.toIndentedString(season)).append("\n");
+		sb.append("    round: ").append(StringHelpders.toIndentedString(round)).append("\n");
+		sb.append("    races: ");
+
+		races.forEach(item -> {
+			sb.append(StringHelpders.toIndentedString(item.toString())).append("\n");
+		});
+
+		sb.append("}");
+		return sb.toString();
+	}
+
+	@Transient
+	private static List<RaceDocument> _races = null;
+	
+	public static RaceTableDocument toRaceTable(RaceTable raceTable) {
+		try {
+			String _season = raceTable.getSeason();
+			String _round = raceTable.getRound();
+			
+
+			try {
+				_races = raceTable.getRaces() != null && raceTable.getRaces().size() > 0 ? new ArrayList<>() : null;
+				raceTable.getRaces().forEach(item -> {
+					RaceDocument _race = RaceDocument.toRace(item);
+					_races.add(_race);
+				});
+			} catch (Exception e) {
+			}
+
+			return new RaceTableDocument(_season, _round, _races);
+		} catch (Exception e) {
+			return null;
+		}
+	}
+}

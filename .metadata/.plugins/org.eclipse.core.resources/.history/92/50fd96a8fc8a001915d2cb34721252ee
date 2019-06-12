@@ -1,0 +1,32 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.Objects;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+import io.swagger.annotations.ApiModelProperty;
+
+
+public class LocationCircuitDocument {
+  private String lat = null;
+  private String _long = null;
+  private String locality = null;
+  private String country = null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class LocationCircuitDocument {\n");
+    
+    sb.append("    lat: ").append(StringHelpders.toIndentedString(lat)).append("\n");
+    sb.append("    _long: ").append(StringHelpders.toIndentedString(_long)).append("\n");
+    sb.append("    locality: ").append(StringHelpders.toIndentedString(locality)).append("\n");
+    sb.append("    country: ").append(StringHelpders.toIndentedString(country)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+}
+

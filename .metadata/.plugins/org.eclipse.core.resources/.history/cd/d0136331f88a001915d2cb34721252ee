@@ -1,0 +1,25 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+
+public class TimeResulDocument   {
+  private String millis;
+  private String time;
+
+  public String getTime() {
+    return time;
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class TimeResulDocument {\n");
+    
+    sb.append("    millis: ").append(StringHelpders.toIndentedString(millis)).append("\n");
+    sb.append("    time: ").append(StringHelpders.toIndentedString(time)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+}
+

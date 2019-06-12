@@ -1,0 +1,40 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.utils.StringHelpders;
+import io.swagger.annotations.ApiModelProperty;
+
+public class MRData2 {
+	private String xmlns = null;
+	private String series = null;
+	private String url = null;
+	private String limit = null;
+	private String offset = null;
+	private String total = null;
+	private List<RaceTable> raceTable = null;
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class MRData {\n");
+
+		sb.append("    xmlns: ").append(StringHelpders.toIndentedString(xmlns)).append("\n");
+		sb.append("    series: ").append(StringHelpders.toIndentedString(series)).append("\n");
+		sb.append("    url: ").append(StringHelpders.toIndentedString(url)).append("\n");
+		sb.append("    limit: ").append(StringHelpders.toIndentedString(limit)).append("\n");
+		sb.append("    offset: ").append(StringHelpders.toIndentedString(offset)).append("\n");
+		sb.append("    total: ").append(StringHelpders.toIndentedString(total)).append("\n");
+		sb.append("    raceTable: ").append(StringHelpders.toIndentedString(raceTable)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+}

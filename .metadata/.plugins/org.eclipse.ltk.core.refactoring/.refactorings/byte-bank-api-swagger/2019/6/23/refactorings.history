@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;io.swagger.Swagger2SpringBoot&apos; to &apos;BytebankSwagger&apos;&#x0D;&#x0A;- Original project: &apos;byte-bank-api&apos;&#x0D;&#x0A;- Original element: &apos;io.swagger.Swagger2SpringBoot&apos;&#x0D;&#x0A;- Renamed element: &apos;io.swagger.BytebankSwagger&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Swagger2SpringBoot&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;io.swagger{Swagger2SpringBoot.java[Swagger2SpringBoot" matchStrategy="1" name="BytebankSwagger" qualified="false" references="true" similarDeclarations="false" stamp="1560005844372" textual="false" version="1.0"/>
+</session>

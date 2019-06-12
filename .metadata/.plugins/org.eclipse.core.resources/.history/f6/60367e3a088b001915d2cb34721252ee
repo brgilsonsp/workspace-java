@@ -1,0 +1,230 @@
+package br.com.icarros.gilson.formulaone.model;
+
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import br.com.icarros.gilson.formulaone.entity.MRDataDocument;
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * MRData
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-06-09T17:44:54.779Z")
+
+public class MRData {
+	@JsonProperty("xmlns")
+	private String xmlns = null;
+
+	@JsonProperty("series")
+	private String series = null;
+
+	@JsonProperty("url")
+	private String url = null;
+
+	@JsonProperty("limit")
+	private String limit = null;
+
+	@JsonProperty("offset")
+	private String offset = null;
+
+	@JsonProperty("total")
+	private String total = null;
+
+	@JsonProperty("RaceTable")
+	@Valid
+	private RaceTable raceTable = null;
+
+	public MRData xmlns(String xmlns) {
+		this.xmlns = xmlns;
+		return this;
+	}
+
+	/**
+	 * Get xmlns
+	 * 
+	 * @return xmlns
+	 **/
+	@ApiModelProperty(example = "http://ergast.com/mrd/1.1", value = "")
+
+	public String getXmlns() {
+		return xmlns;
+	}
+
+	public void setXmlns(String xmlns) {
+		this.xmlns = xmlns;
+	}
+
+	public MRData series(String series) {
+		this.series = series;
+		return this;
+	}
+
+	/**
+	 * Get series
+	 * 
+	 * @return series
+	 **/
+	@ApiModelProperty(example = "f1", value = "")
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
+
+	public MRData url(String url) {
+		this.url = url;
+		return this;
+	}
+
+	/**
+	 * Get url
+	 * 
+	 * @return url
+	 **/
+	@ApiModelProperty(example = "http://ergast.com/api", value = "")
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public MRData limit(String limit) {
+		this.limit = limit;
+		return this;
+	}
+
+	/**
+	 * Get limit
+	 * 
+	 * @return limit
+	 **/
+	@ApiModelProperty(example = "30", value = "")
+
+	public String getLimit() {
+		return limit;
+	}
+
+	public void setLimit(String limit) {
+		this.limit = limit;
+	}
+
+	public MRData offset(String offset) {
+		this.offset = offset;
+		return this;
+	}
+
+	/**
+	 * Get offset
+	 * 
+	 * @return offset
+	 **/
+	@ApiModelProperty(example = "0", value = "")
+
+	public String getOffset() {
+		return offset;
+	}
+
+	public void setOffset(String offset) {
+		this.offset = offset;
+	}
+
+	public MRData total(String total) {
+		this.total = total;
+		return this;
+	}
+
+	/**
+	 * Get total
+	 * 
+	 * @return total
+	 **/
+	@ApiModelProperty(example = "20", value = "")
+
+	public String getTotal() {
+		return total;
+	}
+
+	public void setTotal(String total) {
+		this.total = total;
+	}
+
+	/**
+	 * Get raceTable
+	 * 
+	 * @return raceTable
+	 **/
+	@ApiModelProperty(value = "")
+
+	@Valid
+
+	public RaceTable getRaceTable() {
+		return raceTable;
+	}
+
+	public void setRaceTable(RaceTable raceTable) {
+		this.raceTable = raceTable;
+	}
+
+	@Override
+	public boolean equals(java.lang.Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (o == null || getClass() != o.getClass()) {
+			return false;
+		}
+		MRData mrData = (MRData) o;
+		return Objects.equals(this.xmlns, mrData.xmlns) && Objects.equals(this.series, mrData.series)
+				&& Objects.equals(this.url, mrData.url) && Objects.equals(this.limit, mrData.limit)
+				&& Objects.equals(this.offset, mrData.offset) && Objects.equals(this.total, mrData.total)
+				&& Objects.equals(this.raceTable, mrData.raceTable);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(xmlns, series, url, limit, offset, total, raceTable);
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class MRData {\n");
+
+		sb.append("    xmlns: ").append(toIndentedString(xmlns)).append("\n");
+		sb.append("    series: ").append(toIndentedString(series)).append("\n");
+		sb.append("    url: ").append(toIndentedString(url)).append("\n");
+		sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
+		sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+		sb.append("    total: ").append(toIndentedString(total)).append("\n");
+		sb.append("    raceTable: ").append(toIndentedString(raceTable)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
+
+	/**
+	 * Convert the given object to string with each line indented by 4 spaces
+	 * (except the first line).
+	 */
+	private String toIndentedString(java.lang.Object o) {
+		if (o == null) {
+			return "null";
+		}
+		return o.toString().replace("\n", "\n    ");
+	}
+	
+	public static MRData toMRDataDocumento(MRDataDocument document) {
+		
+	}
+}

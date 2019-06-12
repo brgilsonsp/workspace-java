@@ -1,0 +1,27 @@
+package br.com.icarros.gilson.formulaone.entity;
+
+import java.util.Objects;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModelProperty;
+
+
+public class AverageSpeed2   {
+  private String units = null;
+  private String speed = null;
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class AverageSpeed {\n");
+    
+    sb.append("    units: ").append(toIndentedString(units)).append("\n");
+    sb.append("    speed: ").append(toIndentedString(speed)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+}
+

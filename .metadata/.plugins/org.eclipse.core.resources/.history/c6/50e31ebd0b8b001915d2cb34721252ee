@@ -1,0 +1,155 @@
+package br.com.icarros.gilson.formulaone.model;
+
+import java.util.Objects;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * Constructor
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-06-09T17:44:54.779Z")
+
+public class Constructor   {
+  @JsonProperty("constructorId")
+  private String constructorId = null;
+
+  @JsonProperty("url")
+  private String url = null;
+
+  @JsonProperty("name")
+  private String name = null;
+
+  @JsonProperty("nationality")
+  private String nationality = null;
+
+  public Constructor constructorId(String constructorId) {
+    this.constructorId = constructorId;
+    return this;
+  }
+
+  /**
+   * Get constructorId
+   * @return constructorId
+  **/
+  @ApiModelProperty(example = "mercedes", value = "")
+
+
+  public String getConstructorId() {
+    return constructorId;
+  }
+
+  public void setConstructorId(String constructorId) {
+    this.constructorId = constructorId;
+  }
+
+  public Constructor url(String url) {
+    this.url = url;
+    return this;
+  }
+
+  /**
+   * Get url
+   * @return url
+  **/
+  @ApiModelProperty(example = "http://www.exemple.com", value = "")
+
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  public Constructor name(String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * Get name
+   * @return name
+  **/
+  @ApiModelProperty(example = "Mercedes", value = "")
+
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public Constructor nationality(String nationality) {
+    this.nationality = nationality;
+    return this;
+  }
+
+  /**
+   * Get nationality
+   * @return nationality
+  **/
+  @ApiModelProperty(example = "German", value = "")
+
+
+  public String getNationality() {
+    return nationality;
+  }
+
+  public void setNationality(String nationality) {
+    this.nationality = nationality;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Constructor constructor = (Constructor) o;
+    return Objects.equals(this.constructorId, constructor.constructorId) &&
+        Objects.equals(this.url, constructor.url) &&
+        Objects.equals(this.name, constructor.name) &&
+        Objects.equals(this.nationality, constructor.nationality);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(constructorId, url, name, nationality);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Constructor {\n");
+    
+    sb.append("    constructorId: ").append(toIndentedString(constructorId)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    nationality: ").append(toIndentedString(nationality)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

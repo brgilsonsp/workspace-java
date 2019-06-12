@@ -1,0 +1,5 @@
+package br.com.icarros.gilson.formulaone.documents;
+
+public class Person {
+
+}
